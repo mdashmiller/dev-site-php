@@ -1,3 +1,3 @@
-$(document).ready(function() {
-	alert('hooked up!');
-});
+$(document).ready(() => {
+	$('.sidenav').sidenav()
+})

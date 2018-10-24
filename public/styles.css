@@ -1,3 +1,15 @@
-h1 {
-	color: red;
+header {
+	background: url(./images/univac.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 500px;
+}
+
+/*////////////////////// media queries //////////////////////////*/
+
+@media screen and (max-width: 670px) {
+	header {
+		min-height: 250px;
+	}
 }
