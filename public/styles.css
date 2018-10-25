@@ -1,3 +1,42 @@
+/* mobile styles start at 992px wide */
+
+#mini-nav-btn {
+	height: 42px;
+    width: 46px;
+	position: fixed;
+	bottom: 8px;
+	right: 10px;
+	padding-top: 8px;
+	text-align: center;
+	border-radius: 4px;
+	display: none;
+	cursor: pointer;
+	z-index: 1;
+}
+
+#mini-nav-menu {
+	height: 160px;
+	width: 80px;
+	position: fixed;
+	bottom: 8px;
+	right: 10px;
+	border-radius: 4px;
+	display: none;
+	z-index: 2;
+}
+
+#mini-nav-menu ul {
+	margin: 0;
+}
+
+#mini-nav-menu li {
+	padding: 8px;
+}
+
+.visible {
+	display: block !important;
+}
+
 header {
 	background: url('images/univac.jpg');
 	-webkit-background-size: cover;
@@ -52,5 +91,12 @@ header {
 	.parallax-container,
 	.parallax {
 		max-height: 80px;
+	}
+}
+
+/* hide mini-nav button on smaller screens */
+@media screen and (max-width: 992px) {
+	#mini-nav-btn {
+		display: none !important;
 	}
 }
