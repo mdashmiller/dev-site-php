@@ -11,10 +11,38 @@ header {
 	padding-bottom: 4vw;
 }
 
+.parallax-container,
+.parallax {
+	max-height: 300px;
+}
+
 /*////////////////////// media queries //////////////////////////*/
 
+/* header for mobile */
 @media screen and (max-width: 670px) {
 	header {
 		min-height: 250px;
+	}
+}
+
+/* parallax adjusted for tablets and mobile */
+@media screen and (max-width: 820px) {
+	.parallax-container,
+	.parallax {
+		max-height: 160px;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	.parallax-container,
+	.parallax {
+		max-height: 100px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.parallax-container,
+	.parallax {
+		max-height: 80px;
 	}
 }
