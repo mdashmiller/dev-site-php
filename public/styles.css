@@ -112,11 +112,13 @@ header {
 	}
 }
 
-/* have navbar fixed to top of window for smaller screens*/
+/* have navbar solid color and fixed
+	to top of window for smaller screens*/
 @media screen and (max-width: 992px) {
 	.nav-wrapper {
 		position: fixed;
 		top: 0;
 		z-index: 1;
+		background: #212121 !important;
 	}
 }
