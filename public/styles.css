@@ -1,4 +1,10 @@
-/* mobile styles start at 992px wide */
+header {
+	background: url('images/univac.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 500px;
+}
 
 .mini-nav {
 	height: 42px;
@@ -48,14 +54,6 @@
 	display: block !important;
 }
 
-header {
-	background: url('images/univac.jpg');
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center;
-	min-height: 500px;
-}
-
 .section {
 	padding-top: 4vw;
 	padding-bottom: 4vw;
@@ -75,6 +73,8 @@ header {
 }
 
 /*////////////////////// media queries //////////////////////////*/
+
+/* mobile/tablet styles start at 992px wide */
 
 /* header for mobile */
 @media screen and (max-width: 670px) {
@@ -119,5 +119,4 @@ header {
 		top: 0;
 		z-index: 1;
 	}
-
 }
