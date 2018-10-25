@@ -12,9 +12,13 @@ $(document).ready(() => {
 	// hide mini-nav when user is at top of window
 	$(window).scroll(() => {
 		if ($(window).scrollTop() !== 0) {
-			$('#mini-nav-btn').addClass('visible')
+			if ($(window).width() > 992) {
+				$('#mini-nav-btn').addClass('visible')
+			} else {
+				$('#mini-nav-to-top').addClass('visible')
+			}
 		} else {
-			$('#mini-nav-btn').removeClass('visible')
+			$('.mini-nav').removeClass('visible')
 		}
 	})
 

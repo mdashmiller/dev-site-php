@@ -1,6 +1,6 @@
 /* mobile styles start at 992px wide */
 
-#mini-nav-btn {
+.mini-nav {
 	height: 42px;
     width: 46px;
 	position: fixed;
@@ -12,6 +12,17 @@
 	display: none;
 	cursor: pointer;
 	z-index: 1;
+}
+
+#mini-nav-to-top {
+	opacity: 0.7;
+}
+
+#arrow-up {
+	font-size: 46px;
+    position: fixed;
+    bottom: -10px;
+    right: 18px;
 }
 
 #mini-nav-menu {
