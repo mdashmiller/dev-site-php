@@ -1,6 +1,10 @@
 $(document).ready(() => {
 	// Material css functionality
-	$('.sidenav').sidenav()
+	$('.sidenav')
+	    .sidenav()
+	    .on('click tap', 'li a', () => 
+	        $('.sidenav').sidenav('close')
+		)
 	$('.parallax').parallax()
 	$('.tooltipped').tooltip()
 	$('.scrollspy').scrollSpy()
