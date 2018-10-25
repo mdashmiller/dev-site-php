@@ -16,6 +16,14 @@ header {
 	max-height: 300px;
 }
 
+.btn {
+	margin-top: 20px;
+}
+
+.page-footer li {
+	margin-bottom: 8px;
+}
+
 /*////////////////////// media queries //////////////////////////*/
 
 /* header for mobile */
