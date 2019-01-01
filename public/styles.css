@@ -3,11 +3,11 @@ body {
 }
 
 header {
-	background: url('images/univac_desktop_banner.jpg');
+	background: url('./images/punchcard_banner_desktop.jpg');
 	-webkit-background-size: cover;
 	background-size: cover;
-	background-position: center;
-	min-height: 500px;
+	background-position: bottom;
+	min-height: 600px;
 }
 
 .mini-nav {
