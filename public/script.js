@@ -35,6 +35,16 @@ $(document).ready(() => {
 		$('#mini-nav-menu').removeClass('visible')
 	)
 
+	// show mobile nav on burger click
+	$('.burger').on('click', () =>
+		$('.mobile-menu').addClass('visible')
+	)
+
+	// hide mobile nav when user touches a link
+	$('.mobile-menu a').on('click', () =>
+		$('.mobile-menu').removeClass('visible')
+	)
+
 	// prevent form submit from reloading page
 	$('.btn').on('click', e =>
 		e.preventDefault()
