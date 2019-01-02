@@ -3,11 +3,12 @@ body {
 }
 
 header {
-	background: url('./images/punchcard_banner_desktop.jpg');
-	-webkit-background-size: cover;
-	background-size: cover;
+	background: url('./images/punchcard_banner_mobile_400.jpg');
+	-webkit-background-size: auto;
+	background-size: auto;
+	background-repeat: no-repeat;
 	background-position: bottom;
-	min-height: 600px;
+	height: 212px;
 }
 
 .mini-nav {
@@ -78,12 +79,101 @@ header {
 
 /*////////////////////// media queries //////////////////////////*/
 
-/* mobile/tablet styles start at 992px wide */
+/* mobile-style navbar max-width is 992px */
 
-/* header for mobile */
-@media screen and (max-width: 670px) {
+@media screen and (min-width: 353px) {
 	header {
-		min-height: 250px;
+		background: url('./images/punchcard_banner_mobile_520.jpg');
+		-webkit-background-size: auto;
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 256px;
+	}
+}
+
+/* header for large mobile */
+@media screen and (min-width: 389px) {
+	header {
+		background: url('./images/punchcard_banner_mobile_540.jpg');
+		-webkit-background-size: auto;
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 260px;
+	}
+}
+
+/* header for small tablets */
+@media screen and (min-width: 601px) {
+	header {
+		background: url('./images/punchcard_banner.jpg');
+		-webkit-background-size: auto 100%;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 334px;
+	}
+}
+
+/* header for medium tablets */
+@media screen and (min-width: 786px) {
+	header {
+		background: url('./images/punchcard_banner_816.jpg');
+		-webkit-background-size: auto;
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 382px;
+	}
+}
+
+/* header bumps up in size temporarily for medium
+tablets to line-up with the mobile-style navbar */
+@media screen and (min-width: 937px) {
+	header {
+		background: url('./images/punchcard_banner_897.jpg');
+		-webkit-background-size: auto;
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 418px;
+	}
+}
+
+/* header for large tablets */
+@media screen and (min-width: 993px) {
+	header {
+		background: url('./images/punchcard_banner_816.jpg');
+		-webkit-background-size: auto;
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 382px;
+	}
+}
+
+/* header for medium laptops */
+@media screen and (min-width: 1072px) {
+	header {
+		background: url('./images/punchcard_banner_1032.jpg');
+		-webkit-background-size: auto;
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 468px;
+	}
+}
+
+/* header for large laptops up to 4k */
+@media screen and (min-width: 1364px) {
+	header {
+		background: url('./images/punchcard_banner_1380.jpg');
+		-webkit-background-size: auto;
+		background-size: auto;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		height: 602px;
 	}
 }
 
