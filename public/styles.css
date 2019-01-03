@@ -43,20 +43,20 @@ nav ul a:hover {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 418px;
+	height: 226px;
 	box-shadow: 0 2px 2px #9e9e9e;
 	z-index: 1;
 	display: none;
-	animation-name: drop-down;
-	animation-duration: 0.3s;
+	animation-name: drop-down-sm-phone;
+	animation-duration: 0.2s;
 }
 
 .mobile-menu ul {
-	margin-top: 80px;
+	margin-top: 56px;
 }
 
 .mobile-menu li {
-	padding: 40px 0 0 50px;
+	padding: 24px 0 0 5px;
 }
 
 .mobile-menu li a {
@@ -64,7 +64,7 @@ nav ul a:hover {
 	font-family: Comfortaa, Verdana, sans-serif;
 	color: #c2185b;
 	animation-name: appear;
-	animation-duration: 0.5s;
+	animation-duration: 0.6s;
 }
 
 .mini-nav {
@@ -143,9 +143,29 @@ textarea.materialize-textarea:focus:not([readonly]) {
 }
 
 /*////////////////////// animations ////////////////////////////*/
-@keyframes drop-down {
+@keyframes drop-down-sm-phone {
 	from {height: 0px;}
-	to {height: 418px;}
+	to {height: 226px;}
+}
+
+@keyframes drop-down-lg-phone {
+	from {height: 0px;}
+	to {height: 264px;}
+}
+
+@keyframes drop-down-sm-tablet {
+	from {height: 0px;}
+	to {height: 348px;}
+}
+
+@keyframes drop-down-med-tablet {
+	from {height: 0px;}
+	to {height: 396px;}
+}
+
+@keyframes drop-down-bigger-med-tablet {
+	from {height: 0px;}
+	to {height: 420px;}
 }
 
 @keyframes appear {
@@ -157,7 +177,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
 
 /* mobile-style navbar max-width is 992px */
 
+/* header for medium phones and mobile-nav-dropdown
+for medium and large phones */
 @media screen and (min-width: 353px) {
+
 	header {
 		background: url('./images/punchcard_banner_mobile_520.jpg');
 		-webkit-background-size: auto;
@@ -166,9 +189,31 @@ textarea.materialize-textarea:focus:not([readonly]) {
 		background-position: bottom;
 		height: 256px;
 	}
+
+	.mobile-menu {
+		padding-left: 24px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 264px;
+		box-shadow: 0 2px 2px #9e9e9e;
+		z-index: 1;
+		display: none;
+		animation-name: drop-down-lg-phone;
+		animation-duration: 0.2s;
+	}
+
+	.mobile-menu ul {
+		margin-top: 60px;
+	}
+
+	.mobile-menu li {
+		padding: 28px 0 0 8px;
+	}
+	
 }
 
-/* header for large mobile */
+/* header for large phones */
 @media screen and (min-width: 389px) {
 	header {
 		background: url('./images/punchcard_banner_mobile_540.jpg');
@@ -180,8 +225,9 @@ textarea.materialize-textarea:focus:not([readonly]) {
 	}
 }
 
-/* header for small tablets */
+/* header and mobile-nav-dropdown for small tablets */
 @media screen and (min-width: 601px) {
+
 	header {
 		background: url('./images/punchcard_banner.jpg');
 		-webkit-background-size: auto 100%;
@@ -190,10 +236,32 @@ textarea.materialize-textarea:focus:not([readonly]) {
 		background-position: bottom;
 		height: 334px;
 	}
+
+	.mobile-menu {
+		padding-left: 24px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 348px;
+		box-shadow: 0 2px 2px #9e9e9e;
+		z-index: 1;
+		display: none;
+		animation-name: drop-down-sm-tablet;
+		animation-duration: 0.25s;
+	}
+
+	.mobile-menu ul {
+		margin-top: 72px;
+	}
+
+	.mobile-menu li {
+		padding: 40px 0 0 28px;
+	}
 }
 
-/* header for medium tablets */
+/* header and mobile-nav-dropdown for medium tablets */
 @media screen and (min-width: 786px) {
+
 	header {
 		background: url('./images/punchcard_banner_816.jpg');
 		-webkit-background-size: auto;
@@ -202,11 +270,33 @@ textarea.materialize-textarea:focus:not([readonly]) {
 		background-position: bottom;
 		height: 382px;
 	}
+
+	.mobile-menu {
+		padding-left: 24px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 396px;
+		box-shadow: 0 2px 2px #9e9e9e;
+		z-index: 1;
+		display: none;
+		animation-name: drop-down-med-tablet;
+		animation-duration: 0.25s;
+	}
+
+	.mobile-menu ul {
+		margin-top: 80px;
+	}
+
+	.mobile-menu li {
+		padding: 50px 0 0 40px;
+	}
 }
 
-/* header bumps up in size temporarily for medium
-tablets to line-up with the mobile-style navbar */
+/* header and drop-down bump up in size temporarily for
+medium tablets to line-up with the mobile-style navbar */
 @media screen and (min-width: 937px) {
+
 	header {
 		background: url('./images/punchcard_banner_897.jpg');
 		-webkit-background-size: auto;
@@ -214,6 +304,27 @@ tablets to line-up with the mobile-style navbar */
 		background-repeat: no-repeat;
 		background-position: bottom;
 		height: 418px;
+	}
+
+	.mobile-menu {
+		padding-left: 24px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 420px;
+		box-shadow: 0 2px 2px #9e9e9e;
+		z-index: 1;
+		display: none;
+		animation-name: drop-down-bigger-med-tablet;
+		animation-duration: 0.25s;
+	}
+
+	.mobile-menu ul {
+		margin-top: 90px;
+	}
+
+	.mobile-menu li {
+		padding: 50px 0 0 56px;
 	}
 }
 
@@ -272,6 +383,14 @@ tablets to line-up with the mobile-style navbar */
 	.parallax-container,
 	.parallax {
 		max-height: 80px;
+	}
+}
+
+/* make sure mobile nav never displays
+on non-mobile screens */
+@media screen and (min-width: 993px) {
+	.mobile-menu {
+		display: none !important;
 	}
 }
 

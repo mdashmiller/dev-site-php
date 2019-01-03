@@ -1,15 +1,11 @@
 $(document).ready(() => {
-	// Material css functionality
-	$('.sidenav')
-	    .sidenav()
-	    .on('click tap', 'li a', () => 
-	        $('.sidenav').sidenav('close')
-		)
+	// Materialize css functionality
 	$('.parallax').parallax()
 	$('.tooltipped').tooltip()
 	$('.scrollspy').scrollSpy()
 
-	// hide mini-nav when user is at top of window
+	// hide mini-nav or mobile to-top-button
+	// when user is at top of window
 	$(window).scroll(() => {
 		if ($(window).scrollTop() !== 0) {
 			if ($(window).width() > 992) {
@@ -26,6 +22,7 @@ $(document).ready(() => {
 	$('#mini-nav-btn').hover(() =>
 		$('#mini-nav-menu').addClass('visible')
 	)
+
 	$('#mini-nav-menu').mouseleave(() =>
 		$('#mini-nav-menu').removeClass('visible')
 	)
@@ -35,9 +32,9 @@ $(document).ready(() => {
 		$('#mini-nav-menu').removeClass('visible')
 	)
 
-	// show mobile nav on burger click
+	// toggle mobile nav on burger touch
 	$('.burger').on('click', () =>
-		$('.mobile-menu').addClass('visible')
+		$('.mobile-menu').toggleClass('visible')
 	)
 
 	// hide mobile nav when user touches a link
@@ -45,7 +42,20 @@ $(document).ready(() => {
 		$('.mobile-menu').removeClass('visible')
 	)
 
-	// prevent form submit from reloading page
+	// hide mobile nav when user touches away from it
+	$('div').not('.mobile-menu').not('.navbar').on('click', () => {
+		if ($('.mobile-menu').hasClass('visible')) {
+			$('.mobile-menu').removeClass('visible')
+		}
+	})
+
+	$('.brand-logo').on('click', () => {
+		if ($('.mobile-menu').hasClass('visible')) {
+			$('.mobile-menu').removeClass('visible')
+		}
+	})
+
+	// prevent contact form submit from reloading page
 	$('.btn').on('click', e =>
 		e.preventDefault()
 	)
