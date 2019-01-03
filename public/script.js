@@ -33,9 +33,9 @@ $(document).ready(() => {
 	)
 
 	// toggle mobile nav on burger touch
-	$('.burger').on('click', () =>
+	$('.burger').on('click', () => {
 		$('.mobile-menu').toggleClass('visible')
-	)
+	})
 
 	// hide mobile nav when user touches a link
 	$('.mobile-menu a').on('click', () =>
@@ -55,8 +55,30 @@ $(document).ready(() => {
 		}
 	})
 
-	// prevent contact form submit from reloading page
-	$('.btn').on('click', e =>
-		e.preventDefault()
-	)
+	// prevent any accidental clicking of links when user
+	// touches away from the mobile nav dropdown
+	$('section a').on('click', e => {
+		if ($('.mobile-menu').hasClass('visible')) {
+			e.preventDefault()
+		}
+	})
+
+	$('footer a').on('click', e => {
+		if ($('.mobile-menu').hasClass('visible')) {
+			e.preventDefault()
+		}
+	})
+
+	// form submit button will only work when
+	// the mobile nav dropdown is hidden
+	$('.btn').on('click', e => {
+		if ($('.mobile-menu').hasClass('visible')) {
+			console.log('i did nothing')
+		} else {
+			console.log('i did my primary function')
+		}
+
+		// prevent submit from reloading page
+		e.preventDefault()		
+	})
 })

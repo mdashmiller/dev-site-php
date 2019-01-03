@@ -133,13 +133,25 @@ nav ul a:hover {
 	margin-bottom: 8px;
 }
 
-/*change materialize form field default colors*/
+/* change materialize form field color */
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
 input[type=password]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
 	border-color: #c2185b;
 	box-shadow: none;
+}
+
+/* change materialize form icon and label color */
+.input-field .active {
+	color: #ad1457 !important;
+}
+
+/* change chrome autofill background color */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 30px #f0e3e9 inset !important;
+    transition: 0s !important;
 }
 
 /*////////////////////// animations ////////////////////////////*/
