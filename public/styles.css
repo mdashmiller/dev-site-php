@@ -122,6 +122,10 @@ nav ul a:hover {
 	padding-bottom: 4vw;
 }
 
+.card .card-content {
+	min-height: 21%;
+}
+
 .parallax-container,
 .parallax {
 	max-height: 300px;
@@ -385,6 +389,13 @@ medium tablets to line-up with the mobile-style navbar */
 		background-repeat: no-repeat;
 		background-position: bottom;
 		height: 602px;
+	}
+}
+
+/* keep app portfolio cards all the same height */
+@media screen and (min-width: 1035px) {
+	.card .card-content {
+		min-height: 18%;
 	}
 }
 
