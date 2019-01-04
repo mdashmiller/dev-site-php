@@ -17,6 +17,7 @@ nav {
 
 nav ul a {
 	font-size: 1.15rem;
+	font-weight: bold;
 }
 
 nav ul a:hover {
@@ -61,6 +62,7 @@ nav ul a:hover {
 
 .mobile-menu li a {
 	font-size: 1.25rem;
+	font-weight: bold;
 	font-family: Comfortaa, Verdana, sans-serif;
 	color: #c2185b;
 	animation-name: appear;
@@ -131,6 +133,16 @@ nav ul a:hover {
 
 .page-footer li {
 	margin-bottom: 8px;
+}
+
+.page-footer p a  {
+	color: #c2185b;
+}
+
+a:focus {
+    outline-color: /*-webkit-focus-ring-color*/#c2185b;
+    outline-style: auto;
+    outline-width: 5px;
 }
 
 /* change materialize form field color */
