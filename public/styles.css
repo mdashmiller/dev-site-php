@@ -1,5 +1,6 @@
 body {
 	background: #f0f0e3;
+	font-family: Quicksand, Arial, sans-serif;
 }
 
 header {
@@ -12,11 +13,11 @@ header {
 }
 
 nav {
-	font-family: Comfortaa, Verdana, sans-serif;
+	font-family: Comfortaa, Arial, sans-serif;
 }
 
 nav ul a {
-	font-size: 1.15rem;
+	font-size: 1.1rem;
 	font-weight: bold;
 }
 
@@ -113,17 +114,18 @@ nav ul a:hover {
 	padding: 8px;
 }
 
-.visible {
-	display: block !important;
-}
-
 .section {
 	padding-top: 4vw;
 	padding-bottom: 4vw;
 }
 
+.introducing p,
+#contact p {
+	font-size: 1.2rem;
+}
+
 .card .card-content {
-	min-height: 21%;
+	height: 11rem;
 }
 
 .parallax-container,
@@ -144,9 +146,13 @@ nav ul a:hover {
 }
 
 a:focus {
-    outline-color: /*-webkit-focus-ring-color*/#c2185b;
+    outline-color: #c2185b;
     outline-style: auto;
     outline-width: 5px;
+}
+
+.visible {
+	display: block !important;
 }
 
 /* change materialize form field color */
@@ -392,10 +398,40 @@ medium tablets to line-up with the mobile-style navbar */
 	}
 }
 
-/* keep app portfolio cards all the same height */
-@media screen and (min-width: 1035px) {
-	.card .card-content {
-		min-height: 18%;
+/* slightly larger text on bigger screens */
+@media screen and (min-width: 600px) {
+	.introducing p,
+	#contact p {
+		font-size: 1.15rem;
+	}
+}
+
+@media screen and (min-width: 1441px) {
+	.introducing p,
+	#contact p {
+		font-size: 1.4rem;
+	}
+}
+
+/* keep about section pics lined up with
+titles on large screens */
+@media screen and (min-width: 993px) {
+	.introducing img {
+		margin-top: 8rem;
+	}
+}
+
+@media screen and (min-width: 1338px) {
+	.introducing img {
+		margin-top: 3rem;
+	}
+}
+
+/* slightly larger text for portfolio
+cards on bigger screens */
+@media screen and (min-width: 703px) {
+	.card .card-content p {
+		font-size: 1.1rem;
 	}
 }
 
@@ -436,13 +472,12 @@ on non-mobile screens */
 	}
 }
 
-/* have navbar solid color and fixed
-	to top of window for smaller screens*/
+/* have navbar fixed to top of window
+for smaller screens*/
 @media screen and (max-width: 992px) {
 	.nav-wrapper {
 		position: fixed;
 		top: 0;
 		z-index: 2;
-		background: #212121 !important;
 	}
 }
