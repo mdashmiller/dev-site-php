@@ -18,20 +18,35 @@ $(document).ready(() => {
 		}
 	})
 
-	// show and hide mini-nav on mouseover
-	$('#mini-nav-btn').hover(() =>
+	// show and hide mini-nav on mouseover or touch
+	$('#mini-nav-btn').on('mouseenter touchend', e => {
 		$('#mini-nav-menu').addClass('visible')
-	)
-
+		// disable the 'menu' li to keep the menu from 
+		// immediately closing when user touches
+		// 'menu' to open it or to prevent flicker
+		// of menu closing and reopening if user
+		// clicks on 'menu'
+		$('#mini-nav-menu li:nth-child(5)').off('click')
+		// if user is on touch device, re-enable ability
+		// to close menu by touching 'menu' li
+		if (e.type === 'touchend') {
+			setTimeout(() => {
+				$('#mini-nav-menu li:nth-child(5)').on('click', () =>{
+					$('#mini-nav-menu').removeClass('visible')
+				})
+			}, 250)
+		}
+	})
+	
 	$('#mini-nav-menu').mouseleave(() =>
 		$('#mini-nav-menu').removeClass('visible')
 	)
 
 	// hide mini-nav when a menu item is selected
-	$('#mini-nav-menu').on('click', () =>
+	$('#mini-nav-menu li').on('click', () =>
 		$('#mini-nav-menu').removeClass('visible')
 	)
-
+	
 	// toggle mobile nav on burger touch
 	$('.burger').on('click', () => {
 		$('.mobile-menu').toggleClass('visible')
