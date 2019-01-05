@@ -96,7 +96,7 @@ nav ul a:hover {
 }
 
 #mini-nav-menu {
-	height: 160px;
+	height: 190px;
 	width: 80px;
 	position: fixed;
 	bottom: 8px;
@@ -112,6 +112,10 @@ nav ul a:hover {
 
 #mini-nav-menu li {
 	padding: 8px;
+}
+
+#mini-nav-menu li:nth-child(5) {
+	padding-left: 38px;
 }
 
 .section {
