@@ -214,22 +214,19 @@
         				</p>
         			</div>
         			<div class="col s12 l5 offset-l2">
-        				<!-- invisible iframe to prevent page reload on form submit -->
-        				<!-- <iframe name="decoy" style="display: none;"></iframe>
-        				<form action="submit.php" method="post" target="decoy"> -->
-        				<form action="submit.php" method="post">
+        				<form>
         					<div class="input-field">
         						<i class="material-icons prefix">email</i>
-        						<input type="email" id="email" name="email">
+        						<input type="email" id="email">
         						<label for="email">Your Email</label>
         					</div>
         					<div class="input-field">
         						<i class="material-icons prefix">message</i>
-        						<textarea class="materialize-textarea" id="message" name="message"></textarea>
+        						<textarea class="materialize-textarea" id="message"></textarea>
         						<label for="message">Message</label>
         					</div>
         					<div class="input-field center">
-        						<button class="btn pink darken-3" name="submit">Submit</button>
+        						<button class="btn pink darken-3" id="submit">Submit</button>
         					</div>
         				</form>
         			</div>
@@ -270,6 +267,7 @@
         <!-- Compiled and minified JavaScript -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-        <script src="script.js"></script>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/submit.js"></script>
     </body>
 </html>
