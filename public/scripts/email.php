@@ -8,7 +8,7 @@
 	// 	$subject = "a message from me.com";
 	// 	$message = $_POST['message'];
 
-	// 	$mailTo = "m.robert.miller@gmail.com";
+	// 	$mailTo = "myAddress";
 	// 	$headers = "From: " . $email;
 
 	// 	mail($mailTo, $subject, $message, $headers);
