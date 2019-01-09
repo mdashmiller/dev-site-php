@@ -1,8 +1,8 @@
 <?php
-	$email = $_POST['email'];
+	$sender = $_POST['sender'];
 	$message = $_POST['message'];
 
-	echo $message . " was sent from " . $email;
+	echo $message . " was sent from " . $sender;
 	// if (isset($_POST['submit'])) {
 	// 	$email = $_POST['email'];
 	// 	$subject = "a message from me.com";

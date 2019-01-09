@@ -1,16 +1,20 @@
+import email from '../../config'
+
 // handle contact form submit
 // and send data to php script
 $('#submit').click(e => {
 	e.preventDefault()
 
-	const email = $('#email').val()
+	const to = email.address
+	const sender = $('#email').val()
 	const message = $('#message').val()
 
     $.ajax({
         url: 'scripts/email.php',
         type: 'POST',
         data: {
-        	email,
+        	to,
+        	sender,
         	message
         },
         success: res => {
