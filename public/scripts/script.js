@@ -83,17 +83,4 @@ $(document).ready(() => {
 			e.preventDefault()
 		}
 	})
-
-	// // form submit button will only work when
-	// // the mobile nav dropdown is hidden
-	// $('.btn').on('click', e => {
-	// 	if ($('.mobile-menu').hasClass('visible')) {
-	// 		console.log('i did nothing')
-	// 	} else {
-	// 		console.log('i did my primary function')
-	// 	}
-
-	// 	// prevent submit from reloading page
-	// 	e.preventDefault()		
-	// })
 })
