@@ -137,8 +137,13 @@ nav ul a:hover {
 	max-height: 300px;
 }
 
-.btn {
+.input-field p {
+	margin-bottom: 0;
+}
+
+#submit {
 	margin-top: 20px;
+	width: 84px;
 }
 
 .page-footer li {
@@ -157,6 +162,14 @@ a:focus {
 
 .visible {
 	display: block !important;
+}
+
+.success {
+	color: green;
+}
+
+.fail {
+	color: red;
 }
 
 /* change materialize form field color */
