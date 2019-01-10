@@ -1,4 +1,4 @@
-import email from '../../config'
+import email from '../../config.js'
 
 // handle contact form submit
 // and send data to php script
@@ -19,6 +19,7 @@ $('#submit').click(e => {
         },
         success: res => {
         	alert(res)
+
         	// reset form to initial styles
         	$('#email, #message').val('')
         	$('.prefix, [for="email"], [for="message"]').removeClass('active')

@@ -1,17 +1,13 @@
 <?php
-	$sender = $_POST['sender'];
-	$message = $_POST['message'];
+	if($_POST) {
+		$to = $_POST['to'];
+		$sender = $_POST['sender'];
+		$message = $_POST['message'];
+		$subject = "a message from " . $sender . " on me.com";
+		$headers = "From: " . $sender;
 
-	echo $message . " was sent from " . $sender;
-	// if (isset($_POST['submit'])) {
-	// 	$email = $_POST['email'];
-	// 	$subject = "a message from me.com";
-	// 	$message = $_POST['message'];
+		$sent = mail($to, $subject, $message, $headers);
 
-	// 	$mailTo = "myAddress";
-	// 	$headers = "From: " . $email;
-
-	// 	mail($mailTo, $subject, $message, $headers);
-	// 	header("Location: index.html?mail-sent");
-	// }
+		echo $sent ? "mail sent" : "mail failed";
+	}
 ?>
