@@ -172,6 +172,34 @@ a:focus {
 	color: red;
 }
 
+noscript .container {
+	border-top: 3px solid #7e7e7e;
+	border-bottom: 3px solid #7e7e7e;
+}
+
+noscript .container h6 {
+	color:  #c2185b;
+	margin: 2rem;
+}
+
+noscript.intro-msg .container {
+	margin: 3rem auto;
+}
+
+noscript.missing-img .container {
+	height: 100%
+}
+
+noscript.missing-img .container h6 {
+	margin: 3.5vh 0 2rem;
+}
+
+noscript p#no-js {
+	color: #c2185b;
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+}
+
 /* change materialize form field color */
 input[type=text]:not(.browser-default):focus:not([readonly]),
 input[type=email]:not(.browser-default):focus:not([readonly]),
