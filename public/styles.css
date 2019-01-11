@@ -16,6 +16,11 @@ nav {
 	font-family: Comfortaa, Arial, sans-serif;
 }
 
+nav .brand-logo img {
+	width: 155px;
+	height: 55px;
+}
+
 nav ul a {
 	font-size: 1.1rem;
 	font-weight: bold;
@@ -23,10 +28,6 @@ nav ul a {
 
 nav ul a:hover {
     background-color: #1a1a1a;
-}
-
-.brand-logo span {
-	color: #d2d2d2;
 }
 
 .burger {
@@ -91,8 +92,8 @@ nav ul a:hover {
 #arrow-up {
 	font-size: 46px;
     position: fixed;
-    bottom: -10px;
-    right: 18px;
+    bottom: -13px;
+    right: 20px;
 }
 
 #mini-nav-menu {
@@ -221,7 +222,7 @@ textarea:-webkit-autofill {
     transition: 0s !important;
 }
 
-/*////////////////////// animations ////////////////////////////*/
+/*////////////////////////////////////// animations ///////////////////////////////////////////////*/
 @keyframes drop-down-sm-phone {
 	from {height: 0px;}
 	to {height: 226px;}
@@ -252,9 +253,17 @@ textarea:-webkit-autofill {
 	to {opacity: 1;}
 }
 
-/*////////////////////// media queries //////////////////////////*/
+/*///////////////////////////////////// media queries ///////////////////////////////////////////*/
 
 /* mobile-style navbar max-width is 992px */
+
+/* desktop brand-logo */
+@media screen and (min-width: 993px) {
+	nav .brand-logo img {
+		width: 166px;
+		height: 60px;
+	}
+}
 
 /* header for medium phones and mobile-nav-dropdown
 for medium and large phones */
